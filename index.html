@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <div class="hero">
+        <div class="selector">
+            <div id="selectfield">
+                <p id="selecttext">Select Social Media To Open</p>
+                <img src="images/arrow.png" id="arrowicon">           
+            </div>
+            <ul id="list" class="hide">
+                <li class="options" >
+                    <img src="images/facebook.png">
+                    <p onclick="openFacebook()">Facebook</p>           
+                </li>
+                <li class="options">
+                    <img src="images/instagram.png">
+                    <p onclick="openinstagram()">Instagram</p>           
+                </li> 
+                <li class="options">
+                    <img src="images/pinterest.png">
+                    <p onclick="openpinterest()">Pinterest</p>           
+                </li> 
+                <li class="options">
+                    <img src="images/whatsapp.png">
+                    <p onclick="openwhatsapp()">Whatsapp</p>           
+                </li>
+                <li class="options">
+                    <img src="images/youtube.png">
+                    <p onclick="openyoutube()">Youtube</p>           
+                </li>        
+            </ul>
+        </div>       
+    </div>
+    <script>
+        var selectfield = document.getElementById("selectfield");
+        var selecttext = document.getElementById("selecttext");
+        var options = document.getElementsByClassName("options");
+        var list = document.getElementById("list");
+        var arrowicon = document.getElementById("arrowicon");
+
+        selectfield.onclick = function(){
+            list.classList.toggle("hide");
+            arrowicon.classList.toggle("rotate");
+        };
+        
+
+        function openFacebook() {
+            var facebookURL = "https://www.facebook.com/";
+            window.open(facebookURL, "_blank");
+        }
+        function openinstagram(){
+              var InstagramURL="https://www.instagram.com/"
+              window.open(InstagramURL,"_blank") ;     
+        }
+        function openpinterest(){
+              var pinterestURL="https://www.pinterest.com/"
+              
+              window.open(pinterestURL,"_blank") ;     
+}
+      function openwhatsapp(){
+              
+              var whatsappURL="https://www.whatsapp.com/"
+              
+              window.open(whatsappURL,"_blank") ;     
+}
+     function openyoutube(){
+              
+              var youtubeURL="https://www.youtube.com/"
+              
+              window.open(youtubeURL,"_blank");     
+}
+              
+
+        for (option of options) {
+            option.onclick = function(){
+                selecttext.innerHTML = this.querySelector('p').textContent;
+                list.classList.toggle("hide");
+                arrowicon.classList.toggle("rotate");
+            };
+        }
+    </script>               
+</body>
+</html>

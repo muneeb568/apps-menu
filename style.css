@@ -1,0 +1,63 @@
+*{
+                    margin: 0px;
+                    padding: 0px;
+                    box-sizing: border-box;
+                    font-family: "poppins",sans-serif;           
+           }
+           .hero{
+                  width: -900px;
+                  height: 720px;
+                  background: linear-gradient(#f44336,#730628);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;             
+           }
+           .selector{
+                  width: 350px;             
+           }
+           #selectfield{
+                     width: 350px;
+                     color: #fff;
+                     padding: 15px 20px;
+                     margin-bottom: 20px;
+                     box-sizing: border-box;
+                     background:rgba(255, 255, 255,0.7);
+                     border-radius: 10px;
+                     align-items: center;
+                     justify-content: space-between;
+                     cursor: pointer;
+           }
+           #selectfield img{
+                width: 12px;
+               transition:transform 0.5s;                   
+           }
+           #list{
+                        width: 350px;
+                       background:rgba(255, 255, 255,0.7);
+                       border-radius: 10px;
+                       overflow: hidden;         
+           }
+           .options {
+                   width: 100px;
+                   padding: 15px 0px 15px 70px;
+                   list-style: none;
+                   cursor: pointer;
+                   box-sizing: border-box;
+                   position: relative;
+           }
+           .options img{
+                  width: 25px;
+                  position: absolute;
+                  top: 12px;
+                  left: 25px;             
+           }
+           .options:hover{
+                       background:rgba(255, 255, 255,0.7);
+                       width: 700px;           
+           }
+           .hide{
+               visibility: hidden;
+           }
+           .rotate{
+                    transform: rotate(180deg);           
+           }
